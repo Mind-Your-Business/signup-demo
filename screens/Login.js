@@ -18,7 +18,7 @@ export default class Login extends React.Component {
   onLogin = async () => {
     let res
     try {
-     res = await fetch('http://mindcraft-api.herokuapp.com/auth/signup', {
+     res = await fetch('http://mindcraft-api.herokuapp.com/auth/login', {
         method: 'POST',
         headers: {
           Accept: 'application/json',
@@ -27,7 +27,7 @@ export default class Login extends React.Component {
         body: JSON.stringify({
           email: this.state.email,
           password: this.state.password,
-          method: 'signup'
+          method: 'login'
         })
       })
      console.log(res)
